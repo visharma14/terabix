@@ -52,7 +52,7 @@
             }
 
             function fetchInfo(shortUrl, pwd = ''){
-                return fetch(`/api/get-info?shorturl=${shortUrl}&pwd=${pwd}`).then(async function (res) {
+                return fetch(`https://terabix.vercel.app/api/get-info?shorturl=${shortUrl}&pwd=${pwd}`).then(async function (res) {
                         const body = await res.json()
 
                         if (!body.ok) return alert(body.message)
